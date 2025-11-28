@@ -1,0 +1,37 @@
+---
+title: JVM Arguments
+description: JVM arguments for running Kilt.
+sidebar:
+    badge: 
+        text: Not Recommended
+        variant: caution
+---
+
+Kilt has some Java arguments which can change certain features of the mod.
+:::danger{icon="warning"}
+This is for debug & testing purposes only! If you use any of these, here be dragons!
+:::
+
+-Dkilt.forceRemap
+Mainly for debugging, so already-remapped Forge mods will be remapped again.
+
+-Dkilt.noRemap
+Mainly for debugging, used to test unobfuscated mods and ensure that Kilt is running as intended.
+
+-Dkilt.forceProductionRemap
+Mainly for debugging in the development environment, to make sure all Forge mods remap correctly in production environments without needing to actually launch a production environment.
+
+-Dkilt.disableCoreMods
+Disables coremods in all loaded Forge mods.
+
+-Dkilt.storeModifiedCoreMods
+Stores modified coremods into the .kilt/modifiedCoreMods directory
+
+-Dkilt.printATDebug
+Mainly for debugging, enables logging access transformer info under the INFO level. By default, AT info is logged under the DEBUG level, so it may still be found there. This will result in a massive log file, you have been warned.
+
+-Dkilt.disableFixers
+Mainly for people who want to decompile Forge mods for themselves, and don't want to manually remap all SRG names. This essentially disables most of Kilt's fixers that modify the mod's bytecode to make the mod work in Fabric.
+
+-Dkilt.allowBlockedMods
+Forcefully allow blocked mods to load in Kilt. These mods may cause issues with Kilt, so here be dragons!
