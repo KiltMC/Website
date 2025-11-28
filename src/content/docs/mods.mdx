@@ -7,21 +7,21 @@ import { Badge } from '@astrojs/starlight/components';
 
 ### Mods that will be shown
 
-Mods that are shown are primarily Neo/Forge mods. Fabric mods are only shown if they are broken by Kilt.
+Mods that are shown are primarily Neo/Forge mods. Library mods will only be shown if broken alone. Fabric mods are only shown if they are broken by Kilt.
 
 ### Status Meaning
 
-There are **five** possible statuses for mods in the table below:
+There are **six** possible statuses for mods in the table below:
 
-- <Badge text="Fully Works" variant="success" /> - Fully working with no known issues
-- <Badge text="Required Dependencies" variant="note" /> - Mod may have required dependencies that are
+- <Badge text="Fully Works" size="medium" variant="success" /> - Fully working with no known issues
+- <Badge text="Required Dependency" size="medium" variant="note" /> - Mod may have required dependencies that are
   not Jar-in-Jar'ed already.
-- <Badge text="Cross-Modloader Dependency" variant="tip" /> - Mod may have required dependency that
-  is not Jar-In-Jar'ed and may be required to be on the other modloader.
-- <Badge text="Partially Works" variant="caution" /> - May boot into the world, but may crash later or
+- <Badge text="Cross-Modloader Dependency" size="medium" variant="tip" /> - Mod may have required dependency that
+  is not Jar-In-Jar'ed and may be required to be on the opposite modloader.
+- <Badge text="Partially Works" size="medium" variant="caution" /> - May boot into the world, but may crash later or
   have some features not working.
-- <Badge text="Broken" variant="danger" /> - Crashes either on boot, or on world generation or join.
-- <Badge text="Blocked" variant="danger" /> - Mod is blocked by mod creator intentionally.
+- <Badge text="Broken" size="medium" variant="danger" /> - Crashes either on boot, or on world generation or join.
+- <Badge text="Blocked" size="medium" variant="danger" /> - Mod is blocked by mod creator intentionally.
 
 ### Version
 
@@ -31,8 +31,11 @@ The version listed are the versions that has been tested with Kilt. Other versio
 
 Some mods may have additional notes listed in the table, this may be certain issues or additional dependencies that are required.
 
-| Mod Name                                                                          | Status                                     | Version | Notes |
-|-----------------------------------------------------------------------------------|--------------------------------------------|---------|-------|
-| [Corail Tombstone](https://www.curseforge.com/minecraft/mc-mods/corail-tombstone) | <Badge text="Blocked" variant="danger" /> | 1.20.1  |
-|                                                                                   |                                            |         |
-|                                                                                   |                                            |         |
+
+### Mod List
+Mods are not alphabetically sorted nor status sorted, this may change in the future. To see if your mod of choice works, use your browser's search feature.
+| Mod Name                                                                          | Status                                                | Version | Notes                                                                                 |
+|-----------------------------------------------------------------------------------|-------------------------------------------------------|---------|---------------------------------------------------------------------------------------|
+| [Corail Tombstone](https://www.curseforge.com/minecraft/mc-mods/corail-tombstone) | <Badge text="Blocked" size="medium" variant="danger" />             | 1.20.1  | Blocked by [Corail](https://github.com/KiltMC/Kilt/issues/75#issuecomment-2473537645) |
+| [Alex's Mobs](https://modrinth.com/mod/alexs-mobs)                                | <Badge text="Required Dependency" size="medium" variant="note" /> | 1.20.1  | Requires [Citadel](https://modrinth.com/mod/citadel)                                  |                                   |
+| [Alex's Caves](https://modrinth.com/mod/alexs-caves)                              | <Badge text="Required Dependency" size="medium" variant="note" /> | 1.20.1  | Requires [Citadel](https://modrinth.com/mod/citadel)                                  |                                   |
