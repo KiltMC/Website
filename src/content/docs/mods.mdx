@@ -7,18 +7,19 @@ import { Badge } from '@astrojs/starlight/components';
 
 ### Mods that will be shown
 
-Mods that are shown are primarily Neo/Forge mods. Library mods will only be shown if broken alone. Fabric mods are only shown if they are broken by Kilt. Mods that have very long names may be shortened.
+- Mods that are shown are primarily Neo/Forge mods. Library mods will only be shown if broken alone.
+- Fabric mods are only shown if they are broken by Kilt.
+- Mods that have very long names may be shortened.
+- Mods that have Fabric native versions that work will not be shown.
 
 ### Status Meaning
 
-There are **six** possible statuses for mods in the table below:
+There are **five** possible statuses for mods in the table below:
 
-- <Badge text="Fully Works" size="medium" variant="success" /> - Fully working with no known issues
-Only - <Badge text="Cross-Modloader Dependency" size="medium" variant="note" /> - Mod may have required dependency that
-  is not Jar-In-Jar'ed and may be required to be on the opposite modloader.
-- <Badge text="Partially Works" size="medium" variant="caution" /> - May boot into the world, but may crash later or
-  have some features not working.
-- <Badge text="Broken" size="medium" variant="danger" /> - Crashes either on boot, or on world generation or join.
+- <Badge text="Fully Works" size="medium" variant="success" /> - Fully working with no known issues, if you find any, make a bug report.
+- <Badge text="Cross-Modloader Lib" size="medium" variant="note" /> - Mod may have one or more libraries that is not Jar-In-Jar'ed and may be required to be on the opposite modloader.
+- <Badge text="Partially Works" size="medium" variant="caution" /> - Has features that may not work as intended.
+- <Badge text="Broken" size="medium" variant="danger" /> - Crashes at any point.
 - <Badge text="Blocked" size="medium" variant="danger" /> - Mod is blocked by mod creator intentionally.
 
 ### Version
@@ -27,22 +28,25 @@ The version listed are the versions that has been tested with Kilt. Other versio
 
 ### Notes
 
-Some mods may have additional notes listed in the table, this may be certain issues or additional dependencies that are required.
+Some mods may have additional notes listed in the table, this may be certain issues, or information like requiring additional libraries.
 
 
 ### Mod List
 Mods are not alphabetically sorted nor status sorted, this may change in the future. To see if your mod of choice works, use your browser's search feature.
+{/*Hey, for mod libs that are on the same loader, copy Alex's Mobs / Cave's note*/}
 
-| Mod Name                                                                                                                | Status                                                                   | Version | Notes                                                                                    |
-|-------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|---------|------------------------------------------------------------------------------------------|
-| [Corail Tombstone](https://www.curseforge.com/minecraft/mc-mods/corail-tombstone)                                       | <Badge text="Blocked" size="medium" variant="danger" />                  | 1.20.1  | Blocked by [Corail](https://github.com/KiltMC/Kilt/issues/75#issuecomment-2473537645)    |
-| [Alex's Mobs](https://modrinth.com/mod/alexs-mobs)                                                                      | <Badge text="Fully Works" size="medium" variant="success" />             | 1.20.1  | May require dependencies that are not included, check mod page                           |
-| [Alex's Caves](https://modrinth.com/mod/alexs-caves)                                                                    | <Badge text="Fully Works" size="medium" variant="success" />             | 1.20.1  | May require dependencies that are not included, check mod page                           |
-| [Cracker's Witherstorm](https://modrinth.com/mod/crackers-wither-storm-mod)                                             | <Badge text="Partially Works" size="medium" variant="caution" />         | 1.20.1  | [Some features seem to be broken](https://github.com/KiltMC/Kilt/issues/543)             |
-| [Vampirism](https://modrinth.com/mod/vampirism)                                                                         | <Badge text="Broken" size="medium" variant="danger" />                   | 1.20.1  | [Crashes on world join / creation](https://github.com/KiltMC/Kilt/issues/71)             |
-| [Construction Wand](https://modrinth.com/mod/construction-wand)                                                         | <Badge text="Fully Works" size="medium" variant="success" />             | 1.20.1  |                                                                                          |
-| [Explosion Overhaul: ANLOD](https://www.curseforge.com/minecraft/mc-mods/explosion-overhaul-a-new-level-of-destruction) | <Badge text="Cross-Modloader Dependency" size="medium" variant="note" /> | 1.20.1  | Requires [Cloth Config](https://modrinth.com/mod/cloth-config)                           |
-| [Pipez](https://modrinth.com/mod/pipez)                                                                                 | <Badge text="Partially Works" size="medium" variant="caution" />         | 1.20.1  | [Using wrench on pipes are completely broken](https://github.com/KiltMC/Kilt/issues/262) |
-| [OpenComputers II: Reimagined](https://modrinth.com/mod/oc2r)                                                           | <Badge text="Cross-Modloader Dependency" size="medium" variant="note" /> | 1.20.1  | Requires [Markdown Manual](https://modrinth.com/mod/markdownmanual)                      |
-| [Weather 2](https://modrinth.com/mod/weather-storms-tornadoes)                                                          | <Badge text="Cross-Modloader Dependency" size="medium" variant="note" /> | 1.20.1  | Requires [CoroUtil](https://modrinth.com/mod/coroutil)                                   |
-| [Easy Villagers](https://modrinth.com/mod/easy-villagers)                                                               | <Badge text="Fully Works" size="medium" variant="success" />             | 1.20.1  |                                                                                          |
+| Mod Name                                                                                                         | Status                                                            | Version | Notes                                                                                                                                                                                                            |
+|------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Corail Tombstone](https://www.curseforge.com/minecraft/mc-mods/corail-tombstone)                                | <Badge text="Blocked" size="medium" variant="danger" />           | 1.20.1  | Blocked by [Corail](https://github.com/KiltMC/Kilt/issues/75#issuecomment-2473537645)                                                                                                                            |
+| [Alex's Mobs](https://modrinth.com/mod/alexs-mobs)                                                               | <Badge text="Fully Works" size="medium" variant="success" />      | 1.20.1  | May require dependencies                                                                                                                                                                                         |
+| [Alex's Caves](https://modrinth.com/mod/alexs-caves)                                                             | <Badge text="Fully Works" size="medium" variant="success" />      | 1.20.1  | May require dependencies                                                                                                                                                                                         |
+| [Cracker's Witherstorm](https://modrinth.com/mod/crackers-wither-storm-mod)                                      | <Badge text="Partially Works" size="medium" variant="caution" />  | 1.20.1  | [Some features seem to be broken](https://github.com/KiltMC/Kilt/issues/543)                                                                                                                                     |
+| [Vampirism](https://modrinth.com/mod/vampirism)                                                                  | <Badge text="Broken" size="medium" variant="danger" />            | 1.20.1  | [Crashes on world join / creation](https://github.com/KiltMC/Kilt/issues/71)                                                                                                                                     |
+| [Construction Wand](https://modrinth.com/mod/construction-wand)                                                  | <Badge text="Fully Works" size="medium" variant="success" />      | 1.20.1  |                                                                                                                                                                                                                  |
+| [Explosion Overhaul](https://www.curseforge.com/minecraft/mc-mods/explosion-overhaul-a-new-level-of-destruction) | <Badge text="Cross-Modloader Lib" size="medium" variant="note" /> | 1.20.1  | Requires [Cloth Config](https://modrinth.com/mod/cloth-config)                                                                                                                                                   |
+| [Pipez](https://modrinth.com/mod/pipez)                                                                          | <Badge text="Partially Works" size="medium" variant="caution" />  | 1.20.1  | [Using wrench on pipes dont work](https://github.com/KiltMC/Kilt/issues/262)                                                                                                                                     |
+| [OpenComputers II](https://modrinth.com/mod/oc2r)                                                                | <Badge text="Cross-Modloader Lib" size="medium" variant="note" /> | 1.20.1  | Requires [Markdown Manual](https://modrinth.com/mod/markdownmanual)                                                                                                                                              |
+| [Weather 2](https://modrinth.com/mod/weather-storms-tornadoes)                                                   | <Badge text="Cross-Modloader Lib" size="medium" variant="note" /> | 1.20.1  | Requires [CoroUtil](https://modrinth.com/mod/coroutil)                                                                                                                                                           |
+| [Easy Villagers](https://modrinth.com/mod/easy-villagers)                                                        | <Badge text="Fully Works" size="medium" variant="success" />      | 1.20.1  |                                                                                                                                                                                                                  |
+| [Refined Storage 1](https://modrinth.com/mod/refined-storage)                                                    | <Badge text="Fully Works" size="medium" variant="success" />      | 1.20.1  |                                                                                                                                                                                                                  |
+| [Create Forge](https://modrinth.com/mod/create)                                                                  | <Badge text="Partially Works" size="medium" variant="caution" />  | 1.20.1  | Requires [Vanillin](https://modrinth.com/mod/flw-vanillin) + issues [1](https://github.com/KiltMC/Kilt/issues/509) [2](https://github.com/KiltMC/Kilt/issues/508) [3](https://github.com/KiltMC/Kilt/issues/499) |
