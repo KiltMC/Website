@@ -10,7 +10,6 @@ To install Kilt, you'll have to get some mods that Kilt requires on top of Kilt.
 The mods required to install Kilt are:
 - [Fabric API](https://modrinth.com/mod/fabric-api/versions?g=1.20.1)
 - [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin/versions?g=1.20.1)
-- [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port/versions?g=1.20.1)
 - [Sodium](https://modrinth.com/mod/sodium/versions?g=1.20.1&l=fabric)
 - [Indium](https://modrinth.com/mod/indium/versions?g=1.20.1)
 
