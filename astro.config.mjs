@@ -11,6 +11,9 @@ export default defineConfig({
             favicon: './favicon.png',
             plugins: [starlightThemeRapide()],
             title: 'Kilt Docs',
+            logo: {
+                src: './src/assets/icon.png'
+            },
             customCss: [
                 './src/styles/overrides.css',
                 './src/styles/colors.css',
