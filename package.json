@@ -10,8 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.36.3",
-    "astro": "^5.6.1",
+    "@astrojs/starlight": "^0.37.5",
+    "@fontsource/google-sans-flex": "^5.2.2",
+    "astro": "^5.17.1",
     "sharp": "^0.34.2",
     "starlight-theme-rapide": "^0.5.2"
   }
