@@ -11,6 +11,11 @@ export default defineConfig({
 			favicon: './favicon.png',
 			plugins: [starlightThemeRapide()],
 			title: 'Kilt Docs',
+			customCss: [
+				'./src/styles/overrides.css',
+				'./src/styles/colors.css',
+				'@fontsource/google-sans-flex'
+			],
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/KiltMC/Website' }],
 			sidebar: [
 				{
