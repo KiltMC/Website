@@ -6,7 +6,7 @@ tableOfContents: false
 
 Sometimes, you might be running into problems running certain mods under Kilt, and need to disable a mod and prevent it from being loaded by Kilt.
 
-To start with, go to your `config` folder and make a file called `kilt_overrides.json`, and format it like so:
+To start with, go to your `config` folder and make a file called `kilt_overrides.json`, and format it like so
 
 ```json
 {
