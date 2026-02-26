@@ -4,6 +4,7 @@ description: Get help with Kilt issues.
 ---
 
 Need help because a mod you installed crashed or has unintentional behavior? You may make an [issue](https://github.com/KiltMC/Kilt/issues) or come to our [Discord](https://discord.gg/enGK2TymYJ).<br>
+**NEVER MAKE ISSUE REPORTS TO ORIGINAL PROJECT! IT IS NOT ON THEM TO MAKE COMPATIBILITY! IF REQUIRED WE WILL REPORT IT!** <br>
 But first before you do that, you should follow these tips:
 
 1. **Update** to the **latest version** of **Kilt** - The latest version may have fixes for your issue already. A new release may not be out yet, but a nightly may be available.
