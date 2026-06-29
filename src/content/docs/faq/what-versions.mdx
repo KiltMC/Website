@@ -1,0 +1,34 @@
+---
+title: What versions does Kilt support?
+description: This page is dedicated to showing the development of Kilt's versions and their status.
+tableOfContents: false
+---
+
+import {Badge} from '@astrojs/starlight/components';
+
+This page is dedicated to showing the development of Kilt versions and their status. 
+
+Status Meanings of Kilt Versions:
+- <Badge text="Fully Supported" size="medium" variant="success"/> - A Version that is actively being updated and fixed by Pull Requests and main contributors
+- <Badge text="Maintenance Mode" size="medium" variant="note"/> - A version that has been deemed good enough, and takes in Pull Requests, but rarely gets active development from main contributors
+- <Badge text="Under Development" size="medium" variant="caution"/> - A version that may not work at all, and is under active development to support
+- <Badge text="Unsupported" size="medium" variant="danger"/> - A version that will not get any updates and bug reports will not be fixed
+- <Badge text="Under Consideration" size="medium" variant="tip"/> - A version that has not yet decided on, and is not being developed
+
+Naming schemes:
+There are generally **two** naming schemes for Kilt versions:
+- Hashed - Used on old versions of Kilt, before the naming scheme was made, uses the format of `Kilt-0.0.1+(hash).jar`
+- Versioned - The Current naming scheme, shows the version of Minecraft, and the version of Kilt, uses the format of `MC.MC.v.jar`
+
+Naming Additions:
+General additions for all versions of Kilt:
+- Hashed - Appended to the end of the naming scheme, it says that the version was not a release version and shows a commit hash
+- Local - Appended to the end of the hash, it says that the version was not made with GitHub Actions
+
+| Version | Status                                                            | Comments                                                                 | Naming |
+|---------|-------------------------------------------------------------------|--------------------------------------------------------------------------|--------|
+| 1.19.2  | <Badge text="Unsupported" size="medium" variant="danger"/>        | Semi-unfinished, made for a commission                                   | Hash   |
+| 1.20.1  | <Badge text="Maintenance Mode" size="medium" variant="note"/>     | More difficult to work on over newer versions, and has many mods working | 20.1.x |
+| 1.21.1  | <Badge text="Fully Supported" size="medium" variant="success"/>   | In active development and is the current best version to use Kilt        | 21.1.x |
+| 26.1.x  | <Badge text="Under Development" size="medium" variant="caution"/> | Active development as the next version of Kilt, currently not working    | 26.1.x |
+| Beyond  | <Badge text="Under Consideration" size="medium" variant="tip"/>   |                                                                          | ???    |
