@@ -2,6 +2,7 @@
   "name": "kilt-website",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@11.9.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -12,7 +13,7 @@
   "dependencies": {
     "@astrojs/starlight": "^0.38.2",
     "@fontsource/google-sans-flex": "^5.2.2",
-    "astro": "^6.1.3",
+    "astro": "^6.1.10",
     "sharp": "^0.34.2",
     "starlight-theme-rapide": "^0.5.2"
   }
