@@ -34,19 +34,19 @@ export default defineConfig({
             sidebar: [
                 {
                     label: 'Welcome',
-                    autogenerate: {directory: 'welcome'},
+                    items: [{ autogenerate: { "directory": "welcome" } }]
                 },
                 {
                     label: 'Guides',
-                    autogenerate: {directory: 'guides'},
+                    items: [{ autogenerate: { "directory": "guides" } }]
                 },
                 {
                     label: 'Frequently Asked Questions',
-                    autogenerate: {directory: 'faq'},
+                    items: [{ autogenerate: { "directory": "faq" } }]
                 },
                 {
                     label: 'Technical',
-                    autogenerate: {directory: 'technical'},
+                    items: [{ autogenerate: { "directory": "technical" } }]
                 },
                 {
                     label: 'Mod List',
