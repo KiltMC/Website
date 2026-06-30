@@ -1,5 +1,5 @@
 // @ts-check
-import {defineConfig} from 'astro/config';
+import {defineConfig, passthroughImageService} from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightThemeRapide from 'starlight-theme-rapide'
 
@@ -12,7 +12,7 @@ export default defineConfig({
             plugins: [starlightThemeRapide()],
             title: 'Kilt Docs',
             logo: {
-                src: './src/assets/icon.png'
+                src: './src/assets/icon.webp'
             },
             customCss: [
                 './src/styles/overrides.css',
@@ -55,4 +55,7 @@ export default defineConfig({
             ],
         }),
     ],
+    image: {
+        service: passthroughImageService()
+    }
 });
