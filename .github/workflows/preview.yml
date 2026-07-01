@@ -10,6 +10,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11
+
       - name: Install and Build
         if: github.event.action != 'closed' # We don't need the build if we know the preview will be removed
         run: |
