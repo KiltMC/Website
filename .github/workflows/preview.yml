@@ -21,5 +21,6 @@ jobs:
         with:
           source-dir: .
           preview-branch: gh-pages
-#          umbrella-dir: pr-preview
+          umbrella-dir: pr-preview
           qr-code: true
+          pages-base-url: kilt.bluspring.xyz
