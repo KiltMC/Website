@@ -1,0 +1,25 @@
+name: preview.yml
+on: pull_request
+
+concurrency: preview-${{ github.ref }}
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install and Build
+        if: github.event.action != 'closed' # We don't need the build if we know the preview will be removed
+        run: |
+          pnpm install
+          pnpm run build
+
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: .
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          qr-code: true
