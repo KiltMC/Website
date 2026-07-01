@@ -8,15 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - uses: pnpm/action-setup@v6
 
       - name: Install and Build
         if: github.event.action != 'closed' # We don't need the build if we know the preview will be removed
-        run: |
-          pnpm install
-          pnpm run build
+        uses: withastro/action@v5
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
