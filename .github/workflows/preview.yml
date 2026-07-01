@@ -1,7 +1,9 @@
 name: preview.yml
 on: pull_request
 
-concurrency: preview-${{ github.ref }}
+concurrency:
+  group: preview-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   deploy-preview:
@@ -17,10 +19,7 @@ jobs:
         uses: withastro/action@v5
 
       - name: Deploy preview
-        uses: rossjrw/pr-preview-action@v1
+        uses: rajyan/preview-pages@v1
         with:
           source-dir: ./dist/
-          preview-branch: gh-pages
-          umbrella-dir: pr-preview
-          qr-code: true
-          pages-base-url: kilt.bluspring.xyz
+          configured-domain: kilt.bluspring.xyz
