@@ -1,0 +1,20 @@
+{
+  "name": "kilt-website",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@11.9.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.41.1",
+    "@fontsource/google-sans-flex": "^5.2.4",
+    "astro": "^7.0.3",
+    "sharp": "^0.34.5",
+    "starlight-theme-rapide": "^0.5.2"
+  }
+}

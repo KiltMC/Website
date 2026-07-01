@@ -1,0 +1,12 @@
+:root {
+    --sl-content-width: 72rem;
+    --sl-font: 'Google Sans Flex', sans-serif;
+}
+
+th {
+    min-width: 16rem;
+}
+
+td {
+    padding: 8px 16px 8px 8px;
+}
